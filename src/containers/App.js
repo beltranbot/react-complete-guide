@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import classes from './App.css'
 import Persons from '../components/Persons/Persons'
 import Cockpit from '../components/Cockpit/Cockpit'
-import WithClass from '../highOrderComponents/WithClass'
+import Auxiliary from '../highOrderComponents/Auxiliary'
+import withClass from '../highOrderComponents/withClass'
 
 class App extends Component {
 
@@ -88,7 +89,7 @@ class App extends Component {
         }
 
         return (
-            <WithClass classes={classes.App}>
+            <Auxiliary>
                 <button onClick={() => this.setState({showPersons: true})}>
                     Show Persons
                 </button>
@@ -98,9 +99,9 @@ class App extends Component {
                     clicked={this.togglePersonsHandler}
                 />
                 {persons}
-            </WithClass>
+            </Auxiliary>
         )
     }
 }
 
-export default App
+export default withClass(App, classes.App)

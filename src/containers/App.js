@@ -30,7 +30,7 @@ class App extends Component {
         console.log('[App.js] Inside componentDidMount')
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate (nextProps, nextState) {
         console.log(
             '[UPDATE App.js] Inside shouldComponentUpdate',
             nextProps,
@@ -39,7 +39,7 @@ class App extends Component {
         return true
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentWillUpdate (nextProps, nextState) {
         console.log(
             '[UPDATE App.js] Inside componentWillUpdate',
             nextProps,
@@ -47,7 +47,7 @@ class App extends Component {
         )
     }
 
-    componentDidUpdate() {
+    componentDidUpdate () {
         console.log('[UPDATE App.js] Inside componentDidUpdate')
     }
 
